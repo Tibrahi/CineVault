@@ -21,9 +21,53 @@ body {
   min-height: 100vh;
 }
 
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+/* Firefox Scrollbar Styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a #1a1a1a;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
+  }
+  
+  /* Light Mode Scrollbar Styles */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+  
+  * {
+    scrollbar-color: #c1c1c1 #f1f1f1;
   }
 }
